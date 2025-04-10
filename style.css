@@ -1,0 +1,81 @@
+body {
+    background-color: rgba(24, 24, 24, 1);
+    font-family: sans-serif;
+}
+
+.main-body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 90fr 2048fr;
+    height: 100vh;
+    column-gap: 90px;
+    margin-top: 0px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 0px;
+}
+
+#navigation-bar {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: span 5;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    height: 90px;
+    column-gap: 90px;
+    
+}
+
+.Myname-button {
+    color: rgba(1, 255, 183, 1);
+    font-size: 35px;
+    display: flex;
+    align-items: flex-end;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+.navigation-buttons {
+    grid-column-start: 3;
+    grid-column-end: span 3;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation-buttons > * {
+    display: flex;
+    margin-right: auto;
+    align-items: flex-end;
+}
+
+a {
+    color: rgba(1, 255, 183, 1);
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.Pages {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: span 5;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+}
+
+.Home-page {
+
+}
+
+.About-page {
+
+}
+
+.Projects-page {
+
+}
+
+.Contact-page {
+    
+}
