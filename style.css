@@ -6,13 +6,12 @@ body {
 .main-body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 90fr 2048fr;
+    grid-template-rows: 90fr 2024fr;
     height: 100vh;
-    column-gap: 90px;
-    margin-top: 0px;
-    margin-left: 80px;
-    margin-right: 80px;
-    padding: 0px;
+    column-gap: clamp(1rem, calc(5vw + 1rem), 10rem);
+    padding-top: 0rem;
+    padding-left: clamp(1rem, calc(7vw + 1rem), 8rem);
+    padding-right: clamp(1rem, calc(7vw + 1rem), 8rem);
 }
 
 #navigation-bar {
@@ -23,13 +22,13 @@ body {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
     height: 90px;
-    column-gap: 90px;
+    column-gap: clamp(3rem, calc(5vw + 1rem), 10rem);;
     
 }
 
 .Myname-button {
     color: rgba(1, 255, 183, 1);
-    font-size: 35px;
+    font-size: clamp(1rem, calc(5vw + 1rem), 4rem);
     display: flex;
     align-items: flex-end;
     grid-column-start: 1;
@@ -52,7 +51,7 @@ body {
 a {
     color: rgba(1, 255, 183, 1);
     text-decoration: none;
-    font-size: 30px;
+    font-size: clamp(1rem, calc(5vw + 1rem), 3.25rem);
 }
 
 .Pages {
@@ -77,5 +76,62 @@ a {
 }
 
 .Contact-page {
+    
+}
+
+
+@media (min-width: 768px) {
+
+    .main-body {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 90fr 2024fr;
+        width: 100%;
+        height: 100vh;
+        column-gap: clamp(3rem, calc(5vw + 1rem), 10rem);
+        padding-top: 0rem;
+        padding-left: clamp(2rem, calc(5vw + 1rem), 8rem);
+        padding-right: clamp(2rem, calc(5vw + 1rem), 8rem);
+    }
+    
+    #navigation-bar {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: span 5;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        height: 90px;
+        column-gap: clamp(3rem, calc(5vw + 1rem), 10rem);;
+        
+    }
+    
+    .Myname-button {
+        color: rgba(1, 255, 183, 1);
+        font-size: clamp(1rem, calc(5vw + 1rem), 4rem);
+        display: flex;
+        align-items: flex-end;
+        grid-column-start: 1;
+        grid-column-end: span 2;
+    }
+    
+    .navigation-buttons {
+        grid-column-start: 3;
+        grid-column-end: span 3;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navigation-buttons > * {
+        display: flex;
+        margin-right: auto;
+        align-items: flex-end;
+    }
+    
+    a {
+        color: rgba(1, 255, 183, 1);
+        text-decoration: none;
+        font-size: clamp(1rem, calc(5vw + 1rem), 3.25rem);
+    }
     
 }
